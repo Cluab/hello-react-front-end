@@ -1,8 +1,8 @@
 <div align="center">
   <img src="logo.png" alt="logo" width="300" height="auto" />
   <br/>
-  <h1>Hello Rails API</h1>
-  <h3>This is a Rails API that displays a random greeting message.</h3>
+  <h1>Hello React</h1>
+  <h3>This is a React that displays a random greeting message.</h3>
 </div>
 
 # Table of Contents
