@@ -1,18 +1,46 @@
 {
-  "extends": ["plugin:@nrwl/nx/react"],
-  "root": true,
-  "ignorePatterns": ["!**/*"],
-  "plugins": ["@nrwl/nx"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    {
-      "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
-      "rules": {}
-    }
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "import/no-unresolved": "off",
+    "no-shadow": "off"
+  },
+  "ignorePatterns": [
+    "dist/",
+    "build/",
+    "node_modules/",
+    "e2e/",
+    "vite.config.ts"
   ]
 }

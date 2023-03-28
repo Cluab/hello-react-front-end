@@ -2,7 +2,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": ["vitest/globals", "vitest/importMeta", "vite/client", "node"]
+    "types": [
+      "vitest/globals",
+      "vitest/importMeta",
+      "vite/client",
+      "node"
+    ]
   },
   "include": [
     "vite.config.ts",
@@ -14,7 +19,8 @@
     "src/**/*.spec.js",
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/**/*.d.js"
   ],
   "files": [
     "./node_modules/@nrwl/react/typings/cssmodule.d.ts",
