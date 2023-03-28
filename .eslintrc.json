@@ -38,6 +38,9 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "node_modules/",
+    "e2e/",
+    "vite.config.ts"
   ]
 }

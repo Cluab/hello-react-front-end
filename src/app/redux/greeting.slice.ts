@@ -10,7 +10,7 @@ export const fetchGreeting = createAsyncThunk(
     const response = await fetch('http://127.0.0.1:3000/api/random_greeting');
     const data = await response.json();
     return data.greeting;
-  }
+  },
 );
 
 const greetingsSlice = createSlice({
@@ -20,17 +20,16 @@ const greetingsSlice = createSlice({
   },
   reducers: {
     setGreeting: (state, action) => {
+      /* eslint-disable no-param-reassign */
       state.greeting = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchGreeting.fulfilled, (state, { payload }) => {
-      console.log(payload);
       state.greeting = payload;
     });
   },
 });
-
 
 export const store = configureStore({
   reducer: {
